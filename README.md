@@ -1,5 +1,3 @@
-# desafio_onlyflans
-
 # Proyecto Web en Django: OnlyFlans
 
 ## Integrantes del Grupo
