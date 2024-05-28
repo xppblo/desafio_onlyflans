@@ -1,0 +1,38 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Raleway", sans-serif;
+}
+
+section[id]{
+    scroll-margin-top: 65px;
+}
+
+.bg-color-dark {
+    background-color: black;
+}
+
+.bg-lightblue{
+    background-color: #00C9F2;
+    color: #FFFFFF;   
+}
+
+.color-letters {
+    color: #FFFFFF;
+}
+
+.navbar {
+    transition: all 0.5s;
+}
+
+.navbar-scrolled {
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+  }
+
