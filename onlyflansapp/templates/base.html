@@ -1,3 +1,4 @@
+{% load static %} 
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -11,121 +12,25 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
-    </head>
-    {% load static %}
+        <link type='text/css' href="{% static "css/style.css" %}"  rel="stylesheet"/>
+    </head>          
     <body>
-        <nav
-        class="navbar fixed-top navbar-expand-lg op-0"
-        data-bs-theme="dark"
-    >
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img
-                    src="{% static '/img/logoonlyflans.png' %}"
-                    alt="Logo"
-                    width="100"
-                    height="50"
-                    class="d-inline-block align-text-top"
-                />
-                Viajes Chile</a
-            >
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse me-auto" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#"
-                            >Inicio</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            aria-current="page"
-                            href="#quienes-somos"
-                            >Quienes Somos</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            aria-current="page"
-                            href="#destacados"
-                            >Destacado</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            aria-current="page"
-                            href="#contacto"
-                            >Contacto</a
-                        >
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <!-- Navbar -->
+        {% include "plantillaBarraNavegacion.html" %} 
         <!-- aca se crean los bloques de contenidos-->
+        <h1>Que pasa mi loco</h1>
+        <p>probando cositas tu sabes</p>
         {% block content %}
         {% endblock %}
         <!-- aca termina el bloque del contenido -->
-        <footer class="bg-lightblue">
-            <div class="container">
-                <div class="row py-3">
-                    <div class="col-12 col-md-6">
-                        <h2 class="text-center color-letters">VIAJES CHILE</h2>
-                    </div>
-                    <div class="col-12 col-md-6 text-center">
-                        <a href="https://github.com">
-                            <img
-                                src="assets/img/square-github.svg"
-                                width="40"
-                                height="40"
-                                class="d-inline-block align-text-top"
-                                alt="GitHub"
-                        /></a>
-                        <a href="https://www.linkedin.com/feed/">
-                            <img
-                                src="assets/img/linkedin.svg"
-                                width="40"
-                                height="40"
-                                class="d-inline-block align-text-top"
-                                alt="Linkedin"
-                        /></a>
-                        <a href="https://twitter.com/home?lang=es">
-                            <img
-                                src="assets/img/square-x-twitter.svg"
-                                width="40"
-                                height="40"
-                                class="d-inline-block align-text-top"
-                                alt="x-twitter"
-                        /></a>
-                        <a href="https://web.facebook.com">
-                            <img
-                                src="assets/img/square-facebook.svg"
-                                width="40"
-                                height="40"
-                                class="d-inline-block align-text-top"
-                                alt="Facebook"
-                        /></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <p>probando cositas tu sabes</p>
+        <!-- Footer -->
+        {% include "plantillaFooter.html" %}
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
+        <script type="text/javascript" src="{% static "js/script.js" %}"></script>
     </body>
 </html>

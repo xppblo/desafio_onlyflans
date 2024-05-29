@@ -22,7 +22,7 @@ from onlyflansapp.views import welcome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index),
+    path('', index),
     path('about/', about),
     path('welcome/', welcome),
 ]
