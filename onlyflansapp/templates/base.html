@@ -16,16 +16,19 @@
     </head>          
     <body>
         <!-- Navbar -->
-        {% include "plantillaBarraNavegacion.html" %} 
-        <!-- aca se crean los bloques de contenidos-->
-        <h1>Que pasa mi loco</h1>
-        <p>probando cositas tu sabes</p>
-        {% block content %}
-        {% endblock %}
-        <!-- aca termina el bloque del contenido -->
-        <p>probando cositas tu sabes</p>
+        {% block 'navbar' %}
+        {% include "plantillaBarraNavegacion.html" %}
+        {% endblock %}        
+        <div class="container">
+            <!-- aca se crean los bloques de contenidos-->
+            {% block content %}
+            {% endblock %}
+            <!-- aca termina el bloque del contenido -->
+        </div>
         <!-- Footer -->
+        {% block 'footer' %}
         {% include "plantillaFooter.html" %}
+        {% endblock %}
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
