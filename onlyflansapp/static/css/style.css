@@ -10,6 +10,9 @@ section[id]{
 .bg-color-dark {
     background-color: black;
 }
+.bg-color-grey {
+    background-color: gray;
+}
 
 .bg-lightblue{
     background-color: #00C9F2;
