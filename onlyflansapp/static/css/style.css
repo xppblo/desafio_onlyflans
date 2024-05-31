@@ -1,7 +1,6 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: "Raleway", sans-serif;
 }
 
 section[id]{
@@ -15,6 +14,16 @@ section[id]{
 .bg-lightblue{
     background-color: #00C9F2;
     color: #FFFFFF;   
+}
+
+.bg-cambia-color-verder{
+    background-color: #4BDEA0;
+}
+
+header {
+    background-color: #4BDEA0;
+    height: 100;
+    width: 150;
 }
 
 .color-letters {
