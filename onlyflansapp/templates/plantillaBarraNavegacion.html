@@ -2,7 +2,7 @@
 
   <nav class="navbar navbar-expand-lg bg-lightblue op-0 shadow">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'index' %}">
           <img
               src="{% static "img/logoonlyflans.png" %}"
               alt="Logo"
@@ -17,12 +17,28 @@
         <div class="collapse navbar-collapse me-auto" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link color-letters" aria-current="page" href="/">Inicio</a>
+              <a class="nav-link color-letters" aria-current="page" href="{% url 'index' %}">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link color-letters" href="/about">Sobre nosotros</a>
-            </li>                     
+              <a class="nav-link color-letters" href="{% url 'about' %}">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-letters" href="{% url 'welcome' %}">Bienvenido</a>
+            </li>                               
           </ul>
+          <ul class="navbar-nav ms-2 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle color-letters" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
+                <li><a class="dropdown-item" href="{% url 'registro' %}">Registro</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+        </ul>
         </div>
       </div>
     </nav>

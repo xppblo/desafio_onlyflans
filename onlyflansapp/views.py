@@ -10,3 +10,6 @@ def about(request):
 
 def welcome(request):
     return render(request, "welcome.html", {})
+
+def registro(request):
+    return render(request, "registro.html", {})
