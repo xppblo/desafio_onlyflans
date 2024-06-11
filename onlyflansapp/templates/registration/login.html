@@ -5,15 +5,21 @@
   <div class="mx-5 my-5">
     <h2 class="text-center py-2">Iniciar sesión</h2>
     {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
       <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
+    </div>
     {% endif %}
 
     {% if next %}
       {% if user.is_authenticated %}
+      <div class="alert alert-warning" role="alert">
         <p>Su cuenta no tiene acceso a esta página. Para continuar,
         inicie sesión con una cuenta que tenga acceso.</p>
+      </div>
       {% else %}
+      <div class="alert alert-info" role="alert">
         <p>Por favor inicie sesión para ver esta página.</p>
+      </div>
       {% endif %}
     {% endif %}
 

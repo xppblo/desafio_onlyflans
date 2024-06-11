@@ -28,6 +28,6 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('registro/', registro, name='registro'),
     path('exito/', contact, name='exito'),    
-    path('accounts/', include('django.contrib.auth.urls')),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('accounts/', include('django.contrib.auth.urls')),    
 ]
