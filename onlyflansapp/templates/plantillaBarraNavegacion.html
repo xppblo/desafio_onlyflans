@@ -52,10 +52,10 @@
                   <form method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
                     <button class="dropdown-item" type="submit">Cerrar sesión</button>
-                </form>
+                  </form>
                   {% else %}
                   <li><a class="dropdown-item" href="{% url 'login'%}">Iniciar sesión</a></li>
-                  <li><a class="dropdown-item" href="#">Registro</a></li>
+                  <li><a class="dropdown-item" href="{% url 'registro' %}">Registro</a></li>
                   {% endif %}
                 </ul>
             </li>

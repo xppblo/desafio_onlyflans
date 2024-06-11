@@ -42,7 +42,7 @@ def login2(request):
 def contact(request):
     if request.method == 'POST':
         form = ContactFormForm(request.POST)
-        print(form)
+        #print(form)
         if form.is_valid():
             #aplicar logica
             form2 = ContactForm.objects.create(**form.cleaned_data)
@@ -66,4 +66,6 @@ def registro(request):
         user.last_name = request.POST["last_name"]
         user.save()
         
-    return redirect("/login")
+        return redirect("/accounts/login")
+    else:
+        return render(request,"registro.html",{})
