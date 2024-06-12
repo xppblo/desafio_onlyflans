@@ -24,3 +24,12 @@ class ContactForm(models.Model):
     
     def __str__(self) -> str:
         return f"Contact form: {self.id} - {self.customer_email}"
+    
+class ClasesForm(models.Model):
+    contact_form_uuid = models.UUIDField(default=uuid.uuid4,editable=False)
+    customer_email = models.EmailField()
+    customer_name = models.CharField (max_length=64)
+    message = models.TextField()
+    
+    def __str__(self) -> str:
+        return f"Clases form: {self.id} - {self.customer_email}"

@@ -29,7 +29,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link color-letters" href="{% url 'contact' %}">Contactar</a>
-            </li> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-letters" href="{% url 'clases' %}">Flan Clases</a>
+            </li>  
             {% else %}
             <li class="nav-item">
               <a class="nav-link color-letters" aria-current="page" href="{% url 'index' %}">Inicio</a>
@@ -39,6 +42,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link color-letters" href="{% url 'contact' %}">Contactar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-letters" href="{% url 'clases' %}">Flan Clases</a>
             </li> 
             {% endif %}                                       
           </ul>

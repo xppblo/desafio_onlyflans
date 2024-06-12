@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
-from onlyflansapp.views import index, about, welcome, registro, login2, contact
+from onlyflansapp.views import index, about, welcome, registro, login2, contact, flanclases
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('welcome/', welcome, name='welcome'),
     #path('login2/', login2, name='login2'),
     path('contact/', contact, name='contact'),
+    path('clases/', flanclases, name='clases'),
     path('registro/', registro, name='registro'),
     path('exito/', contact, name='exito'),    
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Flan, ContactForm
-from .forms import ContactFormForm
+from .models import Flan, ContactForm , ClasesForm
+from .forms import ContactFormForm , ClasesFormForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
@@ -39,6 +39,21 @@ def login2(request):
         
         return redirect("/welcome", {})
 
+def flanclases(request):
+    if request.method == 'POST':
+        form = ClasesFormForm(request.POST)
+        #print(form)
+        if form.is_valid():
+            #aplicar logica
+            form3 = ClasesForm.objects.create(**form.cleaned_data)
+            return redirect("/clases", {})
+    else:
+        form = ClasesFormForm()
+        context ={
+            "form": form
+        }
+    return render(request,"clases.html",context)
+
 def contact(request):
     if request.method == 'POST':
         form = ContactFormForm(request.POST)
@@ -53,6 +68,8 @@ def contact(request):
             "form": form
         }
     return render(request,"contact.html",context)
+
+
 
 def registro(request):
     if request.method == "POST":

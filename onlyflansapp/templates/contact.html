@@ -5,8 +5,14 @@
 {% block 'content' %}
 <div class="container">
     
-<h2 class="text-center py-4">CONTACTO</h2>
+<h2 class="text-center py-4">CONTACTANOS</h2>
 <hr class="border-2" />
+
+<h5>¿Tienes una duda?</h5>
+<p>
+    No dudes en rellenar el formulario y realizar las consultas que creas necesarias.
+    Estamos aquí para ayudarte.
+</p>
 
 <form action="{% url "contact" %}" method="post"> 
     {% csrf_token %}

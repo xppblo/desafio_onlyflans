@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} Flan Clases {% endblock %}
+
+{% block 'content' %}
+<div class="container">
+    
+    <h2 class="text-center py-4">FLAN CLASES</h2>
+    <hr class="border-2" />
+    
+    <h5>Clases de Repostería: ¡Descubre el Arte de los Postres!</h5>
+    <p>La repostería es una de las artes culinarias más gratificantes y creativas. Desde tartas y pasteles y sobre todo FLANES!, cada creación dulce puede ser una obra maestra. Si siempre has querido aprender a hacer postres irresistibles o perfeccionar tus habilidades en la cocina, nuestras clases de repostería son la oportunidad perfecta para ti.</p>
+    <h5>Inscríbete Hoy</h5>
+    <p>
+        No importa si eres un novato en la cocina o un amante de los postres buscando perfeccionar sus habilidades, nuestras clases de repostería están diseñadas para ayudarte a desarrollar tus talentos culinarios. 
+        ¡Inscríbete hoy y comienza tu aventura en el dulce mundo de la repostería!
+        Para más información y para inscribirte, visita nuestra página web o contáctanos al teléfono que aparece a continuación. ¡Esperamos verte en nuestras clases!
+    </p>
+    
+    <form action="{% url 'clases' %}" method="post"> 
+        {% csrf_token %}
+        <div>
+            <label class="form-label" for="id_customer_email">Correo Electronico</label>
+            <input class="form-control" type="email" name="customer_email" maxlength="320" placeholder="name@example.com" required="" id="id_customer_email">        
+        </div>    
+        <div>
+            <label class="form-label" for="id_customer_name">Nombre</label>
+            <input class="form-control" type="text" name="customer_name" maxlength="64" required="" id="id_customer_name">
+        </div>    
+        <div>
+            <label class="form-label" for="id_message">Mensaje</label>
+            <input class="form-control" type="text" style="height: 100px" name="message" required="" id="id_message">
+        </div>
+        <button type="submit" class="btn btn-info bg-lightblue my-3">Enviar</button>
+    </form>
+    
+    </div>
+{% endblock%}
