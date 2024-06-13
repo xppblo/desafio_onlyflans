@@ -52,7 +52,7 @@ def flanclases(request):
         context ={
             "form": form
         }
-    return render(request,"clases.html",context)
+        return render(request,"clases.html",context)
 
 def contact(request):
     if request.method == 'POST':
@@ -61,13 +61,13 @@ def contact(request):
         if form.is_valid():
             #aplicar logica
             form2 = ContactForm.objects.create(**form.cleaned_data)
-            return redirect("/exito", {})
+            return redirect("/", {})
     else:
         form = ContactFormForm()
         context ={
             "form": form
         }
-    return render(request,"contact.html",context)
+        return render(request,"contact.html",context)
 
 
 
